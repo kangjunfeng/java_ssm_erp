@@ -14,6 +14,7 @@
 		<servlet.api.version>2.5</servlet.api.version>
 		<jsp-api.version>2.0</jsp-api.version>
 		<jstl.version>1.2</jstl.version>
+		<shiro.version>1.2.3</shiro.version>
 	 </properties>
 
 	 <dependencies>
@@ -77,6 +78,28 @@
 			<artifactId>jsp-api</artifactId>
 			<version>${jsp-api.version}</version>
 			<scope>provided</scope>
+		</dependency>
+		<!-- shiro权限控制 -->
+		<dependency>
+		 	<groupId>org.apache.shiro</groupId>
+		  <artifactId>shiro-core</artifactId>
+		  <version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.shiro</groupId>
+		  <artifactId>shiro-web</artifactId>
+		  <version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.shiro</groupId>
+		  <artifactId>shiro-spring</artifactId>
+		  <version>${shiro.version}</version>
+		</dependency>
+		<!-- shiro缓存 -->
+		<dependency>
+		  <groupId>org.apache.shiro</groupId>
+		  <artifactId>shiro-ehcache</artifactId>
+		  <version>${shiro.version}</version>
 		</dependency>
   	 </dependencies>
    

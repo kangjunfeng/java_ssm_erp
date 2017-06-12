@@ -12,6 +12,11 @@ public class FirstController {
 		return "login";
 	}
 	
+	@RequestMapping("/validatecode")
+	public String verify()throws Exception{
+		return "validate/validatecode";
+	}
+	
 	@RequestMapping("/index")
 	public String index()throws Exception{
 		return "index";
