@@ -11,10 +11,16 @@
 	<properties>
 	 	<junit.version>4.12</junit.version>
 	 	<spring.version>4.3.8.RELEASE</spring.version>
+	 	<mybatis.version>3.2.8</mybatis.version>
 		<servlet.api.version>2.5</servlet.api.version>
 		<jsp-api.version>2.0</jsp-api.version>
 		<jstl.version>1.2</jstl.version>
 		<shiro.version>1.2.3</shiro.version>
+		<hibernate.validator.version>4.3.0.Final</hibernate.validator.version>
+		<mysql.connector.version>5.1.32</mysql.connector.version>
+		<aspectj.weaver.version>1.6.11</aspectj.weaver.version>
+		<pagehelper.version>4.0.0</pagehelper.version>
+		<druid.version>1.0.9</druid.version>
 	 </properties>
 
 	 <dependencies>
@@ -61,7 +67,52 @@
 			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		   <!-- JSP相关 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- MySql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+		<!-- Mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.miemiedev</groupId>
+			<artifactId>mybatis-paginator</artifactId>
+			<version>1.2.15</version>
+		</dependency>
+		<!-- Mybatis缓存 -->
+		<dependency>
+	        <groupId>org.mybatis.caches</groupId>
+	        <artifactId>mybatis-ehcache</artifactId>
+	        <version>1.0.2</version>
+	    </dependency>
+	    <!-- 缓存ehcache -->
+		<dependency>
+	        <groupId>net.sf.ehcache</groupId>
+	        <artifactId>ehcache</artifactId>
+	        <version>2.8.1</version>
+	    </dependency>
+    	<!-- 连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+		<!-- JSP相关 -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
@@ -100,6 +151,29 @@
 		  <groupId>org.apache.shiro</groupId>
 		  <artifactId>shiro-ehcache</artifactId>
 		  <version>${shiro.version}</version>
+		</dependency>
+		<!-- hibernate validator -->
+		<dependency>
+		   <groupId>org.hibernate</groupId>
+		   <artifactId>hibernate-validator</artifactId>
+		   <version>${hibernate.validator.version}</version>
+		</dependency>
+		<!-- 分页 -->
+	   	<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>${pagehelper.version}</version>
+		</dependency>
+		<!-- 其他 -->
+	  	<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>${aspectj.weaver.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>1.0.0.GA</version>
 		</dependency>
   	 </dependencies>
    

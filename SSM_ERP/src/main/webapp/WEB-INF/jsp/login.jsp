@@ -83,7 +83,7 @@
 						</div> 
 					-->
 					<div>
-						<a href="#" id="login" class="button hide">登录</a>
+						<a href="/login" id="login" class="button hide">登录</a>
 					</div>
 					
 				</fieldset>
