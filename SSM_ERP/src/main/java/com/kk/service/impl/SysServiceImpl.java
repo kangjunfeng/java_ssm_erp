@@ -37,7 +37,7 @@ public class SysServiceImpl implements SysService {
 	@Override
 	public ActiveUser authenticat(String userName, String password) throws Exception {
 		/**
-		  * 认证过程：根据用户身份（账号）查询数据库，如果查询不到用户不存在,对输入的密码和数据库密码 进行比对，如果一致，认证通过
+		  * 认证过程：根据用户身份（账号）查询数据库，如果查询不到,用户不存在,对输入的密码和数据库密码 进行比对，如果一致，认证通过
 		  */
 		//根据用户账号查询数据库
 		SysUser sysUser = this.getSysUserByName(userName);
@@ -52,7 +52,8 @@ public class SysServiceImpl implements SysService {
 		}
 		//得到用户id
 		String userid = sysUser.getId();
-		//根据用户id查询菜单 
+	
+		//根据用户id查询菜单
 		List<SysPermission> menus =this.findMenuListByUserId(userid);
 		
 		//根据用户id查询权限url

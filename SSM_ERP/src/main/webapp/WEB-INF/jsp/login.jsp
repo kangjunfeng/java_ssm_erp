@@ -28,7 +28,6 @@
 			<div class="title hide">管理系统登录</div>
 			<form name="login" action="#" method="post">
 				<fieldset>
-				
 					<!--USERNAME -->
 					<div>
 						<div class="input">
@@ -83,7 +82,7 @@
 						</div> 
 					-->
 					<div>
-						<a href="/login" id="login" class="button hide">登录</a>
+						<a href="ajaxLogin" id="login" class="button hide">登录</a>
 					</div>
 					
 				</fieldset>

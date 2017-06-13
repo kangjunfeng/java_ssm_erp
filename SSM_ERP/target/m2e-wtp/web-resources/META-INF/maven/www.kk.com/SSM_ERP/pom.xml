@@ -12,19 +12,46 @@
 	 	<junit.version>4.12</junit.version>
 	 	<spring.version>4.3.8.RELEASE</spring.version>
 	 	<mybatis.version>3.2.8</mybatis.version>
-		<servlet.api.version>2.5</servlet.api.version>
+		<servlet-api.version>2.5</servlet-api.version>
 		<jsp-api.version>2.0</jsp-api.version>
 		<jstl.version>1.2</jstl.version>
 		<shiro.version>1.2.3</shiro.version>
-		<hibernate.validator.version>4.3.0.Final</hibernate.validator.version>
-		<mysql.connector.version>5.1.32</mysql.connector.version>
-		<aspectj.weaver.version>1.6.11</aspectj.weaver.version>
+		<hibernate-validator.version>4.3.0.Final</hibernate-validator.version>
+		<mysql-connector.version>5.1.32</mysql-connector.version>
+		<aspectj-weaver.version>1.6.11</aspectj-weaver.version>
 		<pagehelper.version>4.0.0</pagehelper.version>
 		<druid.version>1.0.9</druid.version>
+		<jackson-core.version>2.6.0</jackson-core.version>
+		<jackson-databind.version>2.4.2</jackson-databind.version>
+		<jackson-mapper-asl.version>1.5.0</jackson-mapper-asl.version>
+		<cglib.version>2.2.2</cglib.version>
 	 </properties>
 
 	 <dependencies>
-		 <dependency>
+		<!-- 时间操作组件 -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<!-- Apache工具组件 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.3</version>
+		</dependency>
+		<!-- 单元测试 -->
+		<dependency>
 		  <groupId>junit</groupId>
 		  <artifactId>junit</artifactId>
 		  <version>${junit.version}</version>
@@ -76,7 +103,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.connector.version}</version>
+			<version>${mysql-connector.version}</version>
 		</dependency>
 		<!-- Mybatis -->
 		<dependency>
@@ -121,7 +148,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>${servlet.api.version}</version>
+			<version>${servlet-api.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -152,11 +179,17 @@
 		  <artifactId>shiro-ehcache</artifactId>
 		  <version>${shiro.version}</version>
 		</dependency>
+		<!-- cglib动态代理 -->
+		<dependency>
+		    <groupId>cglib</groupId>
+		    <artifactId>cglib</artifactId>
+		    <version>${cglib.version}</version>
+		</dependency>
 		<!-- hibernate validator -->
 		<dependency>
 		   <groupId>org.hibernate</groupId>
 		   <artifactId>hibernate-validator</artifactId>
-		   <version>${hibernate.validator.version}</version>
+		   <version>${hibernate-validator.version}</version>
 		</dependency>
 		<!-- 分页 -->
 	   	<dependency>
@@ -164,11 +197,27 @@
 			<artifactId>pagehelper</artifactId>
 			<version>${pagehelper.version}</version>
 		</dependency>
+		<!-- Jackson Json处理工具包 -->
+		<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson-core.version}</version>
+        </dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson-databind.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-mapper-asl</artifactId>
+		    <version>${jackson-mapper-asl.version}</version>
+		</dependency>
 		<!-- 其他 -->
 	  	<dependency>
 		    <groupId>org.aspectj</groupId>
 		    <artifactId>aspectjweaver</artifactId>
-		    <version>${aspectj.weaver.version}</version>
+		    <version>${aspectj-weaver.version}</version>
 		</dependency>
 		<dependency>
 		    <groupId>javax.validation</groupId>

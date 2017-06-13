@@ -10,7 +10,6 @@
 
 
 <%
-	System.out.println("123");
 	int width = 65;
 	int height = 35;
 	//create the image
