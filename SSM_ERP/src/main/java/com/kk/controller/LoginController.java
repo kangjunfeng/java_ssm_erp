@@ -75,7 +75,7 @@ public class LoginController {
 	public @ResponseBody Map<String,Object> ajaxLogin(@RequestParam(value="username",required=false) String username, @RequestParam(value="password",required=false) String password,
 			@RequestParam(required=false) String randomcode, HttpSession session) throws Exception{
 	    
-		System.out.println("1234556");
+		System.out.println("123456");
 		Map<String,Object> map = new HashMap<String,Object>();
 		
 		if(randomcode !=null && !randomcode.equals("")){
@@ -93,7 +93,7 @@ public class LoginController {
 	    if (!currentUser.isAuthenticated()) {
 	    	
 	    	UsernamePasswordToken token = new UsernamePasswordToken(username, password);
-	         
+	        
 	        try{
 	            currentUser.login(token);
 	        }catch(UnknownAccountException ex){

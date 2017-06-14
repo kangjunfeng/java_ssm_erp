@@ -19,6 +19,7 @@
 <link rel="stylesheet" type="text/css" href="css/login/login.css" />
 <script type="text/javascript" src="js/login/placeholder.js"></script>
 <script type="text/javascript" src="js/login/login.js"></script>
+
 </head>
 
 <body>
@@ -58,7 +59,7 @@
 								验证码：<input id="randomcode" name="randomcode" size="8" />
 								<img id="randomcode_img" src="${basePath}first/validatecode" alt=""
 									width="56" height="20" align='absMiddle' /> 
-								<a href=javascript:randomcode_refresh()>刷新</a>
+								<a href="javascript:randomcode_refresh()">刷新</a>
 							</div>
 							<div style="margin-left:98px;">
 								<span id="randomcode_span"></span>
@@ -82,9 +83,8 @@
 						</div> 
 					-->
 					<div>
-						<a href="ajaxLogin" id="login" class="button hide">登录</a>
-					</div>
-					
+						<a  id="login" class="button hide">登录</a>
+					</div> 
 				</fieldset>
 			</form>
 		</div>

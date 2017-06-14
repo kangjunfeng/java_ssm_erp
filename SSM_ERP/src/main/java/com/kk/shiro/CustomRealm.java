@@ -55,7 +55,7 @@ public class CustomRealm extends AuthorizingRealm {
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(
 			AuthenticationToken token) throws AuthenticationException {
-		System.out.println("doGetAuthenticationInfo");
+		System.out.println("doGetAuthenticationInfo--1");
 		// token是用户输入的用户名和密码 
 		// 第一步从token中取出用户名
 		String username = (String) token.getPrincipal();
@@ -72,6 +72,7 @@ public class CustomRealm extends AuthorizingRealm {
 		
 		// 如果查询不到返回null
 		if(sysUser==null){
+			System.out.println("sysUser is null");
 			return null;
 		}
 		
