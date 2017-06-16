@@ -16,9 +16,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.kk.dmain.customize.ActiveUser;
 import com.kk.domain.authority.SysPermission;
 import com.kk.domain.authority.SysUser;
+import com.kk.domain.customize.ActiveUser;
 import com.kk.domain.vo.RoleVO;
 import com.kk.service.RoleService;
 import com.kk.service.SysService;

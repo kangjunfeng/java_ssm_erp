@@ -2,9 +2,9 @@ package com.kk.service;
 
 import java.util.List;
 
-import com.kk.dmain.customize.ActiveUser;
 import com.kk.domain.authority.SysPermission;
 import com.kk.domain.authority.SysUser;
+import com.kk.domain.customize.ActiveUser;
 
 /**
  * 认证授权服务接口

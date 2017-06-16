@@ -7,13 +7,13 @@ import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.kk.dmain.customize.CustomResult;
-import com.kk.dmain.customize.EUDataGridResult;
 import com.kk.domain.authority.SysRole;
 import com.kk.domain.authority.SysRoleExample;
 import com.kk.domain.authority.SysRolePermission;
 import com.kk.domain.authority.SysUserRole;
 import com.kk.domain.authority.SysUserRoleExample;
+import com.kk.domain.customize.CustomResult;
+import com.kk.domain.customize.EUDataGridResult;
 import com.kk.domain.vo.RoleVO;
 import com.kk.mapper.authority.SysRoleMapper;
 import com.kk.mapper.authority.SysRolePermissionMapper;

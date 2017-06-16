@@ -6,11 +6,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kk.dmain.customize.ActiveUser;
 import com.kk.domain.authority.SysPermission;
 import com.kk.domain.authority.SysPermissionExample;
 import com.kk.domain.authority.SysUser;
 import com.kk.domain.authority.SysUserExample;
+import com.kk.domain.customize.ActiveUser;
 import com.kk.mapper.authority.SysPermissionMapper;
 import com.kk.mapper.authority.SysPermissionMapperCustom;
 import com.kk.mapper.authority.SysUserMapper;

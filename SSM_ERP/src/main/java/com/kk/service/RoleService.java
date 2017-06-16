@@ -2,9 +2,9 @@ package com.kk.service;
 
 import java.util.List;
 
-import com.kk.dmain.customize.CustomResult;
-import com.kk.dmain.customize.EUDataGridResult;
 import com.kk.domain.authority.SysRole;
+import com.kk.domain.customize.CustomResult;
+import com.kk.domain.customize.EUDataGridResult;
 import com.kk.domain.vo.RoleVO;
 
 public interface RoleService {
