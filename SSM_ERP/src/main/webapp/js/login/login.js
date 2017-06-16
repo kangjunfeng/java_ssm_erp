@@ -1,5 +1,4 @@
-
-$(document).ready(function() { 
+$(document).ready(function() {
 	$("#login").click(function() {
 		var uname = $("#username");
 		var pwd = $("#password");
@@ -74,7 +73,7 @@ $(document).ready(function() {
 				$("#passwordspan").html("");
 				$("#randomcode_span").html("");
 				$.ajax({
-						url : '${basePath}ajaxLogin',// 跳转到 action  
+						url : 'ajaxLogin',// 跳转到 action  
 						data : {
 							username : uname.val(),
 							password : pwd.val(),
@@ -82,7 +81,7 @@ $(document).ready(function() {
 						},
 						type : 'post',
 						cache : false,
-//						dataType : 'json',
+						dataType : 'json',
 						success : function(data) {
 							if (data.msg == 'account_error') {
 								$("#errorspan").html("<font color='red'> 用户不存在！</font>");
@@ -101,7 +100,7 @@ $(document).ready(function() {
 								rcode_flag = true;
 								randomcode_refresh();
 							} else {
-								location.href = "${baseurl}home";
+								location.href = "first/index";
 							}
 						},
 						error:function(XMLHttpRequest, textStatus, errorThrown){									

@@ -34,25 +34,27 @@ public class RoleServiceImpl implements RoleService {
 
 	@Override
 	public List<RoleVO> find() throws Exception {
-		// TODO Auto-generated method stub
 		SysRoleExample example = new SysRoleExample();
 		return sysRoleMapper.selectByExample(example);
 	}
 
 	@Override
 	public RoleVO findRoleByUserId(String userId) throws Exception {
-		// TODO Auto-generated method stub
 		SysUserRoleExample example = new SysUserRoleExample();
 		SysUserRoleExample.Criteria criteria = example.createCriteria();
 		criteria.andSysUserIdEqualTo(userId);
-		SysUserRole sysUserRole = sysUserRoleMapper.selectByExample(example).get(0);
+		List<SysUserRole> list  = 	sysUserRoleMapper.selectByExample(example);
+		if (list==null && list.size()==0) {
+			System.out.println("null");
+			return null;
+		}
+		SysUserRole sysUserRole = list.get(0);
 		RoleVO sysRole = sysRoleMapper.selectByPrimaryKey(sysUserRole.getSysRoleId());
 		return sysRole;
 	}
 
 	@Override
 	public EUDataGridResult getList(int page, int rows, RoleVO sysRole) throws Exception {
-		// TODO Auto-generated method stub
 		//查询列表
 		SysRoleExample example = new SysRoleExample();
 		//分页处理

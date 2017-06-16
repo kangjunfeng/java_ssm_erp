@@ -10,7 +10,7 @@
 
 	<properties>
 	 	<junit.version>4.12</junit.version>
-	 	<spring.version>4.3.8.RELEASE</spring.version>
+	 	<spring.version>4.0.8.RELEASE</spring.version>
 	 	<mybatis.version>3.2.8</mybatis.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<jsp-api.version>2.0</jsp-api.version>
@@ -22,9 +22,10 @@
 		<pagehelper.version>4.0.0</pagehelper.version>
 		<druid.version>1.0.9</druid.version>
 		<jackson-core.version>2.6.0</jackson-core.version>
-		<jackson-databind.version>2.4.2</jackson-databind.version>
+		<jackson-databind.version>2.4.0</jackson-databind.version>
 		<jackson-mapper-asl.version>1.5.0</jackson-mapper-asl.version>
 		<cglib.version>2.2.2</cglib.version>
+		<jackson-annotations.version>2.1.0</jackson-annotations.version>
 	 </properties>
 
 	 <dependencies>
@@ -212,6 +213,11 @@
 		    <groupId>org.codehaus.jackson</groupId>
 		    <artifactId>jackson-mapper-asl</artifactId>
 		    <version>${jackson-mapper-asl.version}</version>
+		</dependency> 
+		<dependency>
+		    <groupId>com.fasterxml.jackson.module</groupId>
+		    <artifactId>jackson-module-jaxb-annotations</artifactId>
+		    <version>${jackson-core.version}</version>
 		</dependency>
 		<!-- 其他 -->
 	  	<dependency>

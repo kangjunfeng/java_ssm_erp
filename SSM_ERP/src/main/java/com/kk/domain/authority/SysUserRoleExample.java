@@ -92,6 +92,7 @@ public class SysUserRoleExample {
 
         protected void addCriterion(String condition, Object value, String property) {
             if (value == null) {
+            	System.out.println("addCriterion null");
                 throw new RuntimeException("Value for " + property + " cannot be null");
             }
             criteria.add(new Criterion(condition, value));

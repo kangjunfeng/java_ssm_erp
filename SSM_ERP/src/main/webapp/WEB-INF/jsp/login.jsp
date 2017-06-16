@@ -19,7 +19,6 @@
 <link rel="stylesheet" type="text/css" href="css/login/login.css" />
 <script type="text/javascript" src="js/login/placeholder.js"></script>
 <script type="text/javascript" src="js/login/login.js"></script>
-
 </head>
 
 <body>
@@ -67,7 +66,7 @@
 						</div>
 					</div>
 					
-					<!-- REMEMBERME -->					
+		  			<!-- REMEMBERME -->					
 					<div class="checkbox">
 						<input type="checkbox" name="remember" id="remember" checked="checked"/>
 						<label for="remember">
@@ -79,8 +78,8 @@
 					<!-- LOGIN -->
 					<!-- 
 						<div class="enter">
-							<input class="button hide" name="submit" type="submit" value="登录" />
-						</div> 
+						<input class="button hide" name="submit" type="submit" value="登录" />
+						</div>  
 					-->
 					<div>
 						<a  id="login" class="button hide">登录</a>
